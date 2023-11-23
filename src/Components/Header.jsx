@@ -8,7 +8,6 @@ export default function Header() {
   const dispatch = useDispatch();
   const darkmode = useSelector((state) => state.darkmode);
 
-  console.log(darkmode.state);
   return (
     <div
       className={

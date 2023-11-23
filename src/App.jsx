@@ -3,9 +3,18 @@ import Header from "./Components/Header";
 import SearchCountry from "./Components/SearchCountry";
 import { useSelector, useDispatch } from "react-redux";
 import RegionFilter from "./Components/RegionFilter";
+import { getCountryList } from "./features/country";
 
 export default function App() {
   const darkmode = useSelector((state) => state.darkmode);
+  const countriesList = useSelector((state) => state.country);
+  const dispatch = useDispatch();
+
+  if (!countriesList.data) {
+    dispatch(getCountryList());
+  }
+
+  console.log(countriesList.data);
   return (
     <div
       className={
