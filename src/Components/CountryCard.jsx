@@ -27,22 +27,22 @@ export default function CountryCard({ country }) {
       <div
         className={
           darkmode.state
-            ? " text-white mt-5 ml-5 pb-5"
+            ? " text-slate-200 mt-5 ml-5 pb-5"
             : " text-black mt-5 ml-5 pb-5"
         }
       >
         <p className="font-semibold">{country.name}</p>
 
         <div className="mt-2 text-sm">
-          <p className="text-xs font-thin text-slate-200">
+          <p className="text-xs font-thin ">
             <span className="font-semibold text-sm">Population: </span>
             {new Intl.NumberFormat("fr-FR").format(country.population)}
           </p>
-          <p className="text-xs font-thin text-slate-200">
+          <p className="text-xs font-thin ">
             <span className="font-semibold text-sm">Regions: </span>
             {country.region}
           </p>
-          <p className="text-xs font-thin text-slate-200">
+          <p className="text-xs font-thin ">
             <span className="font-semibold text-sm">Capital: </span>
             {country.capital}
           </p>
