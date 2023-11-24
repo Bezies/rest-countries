@@ -13,13 +13,13 @@ export default function CountryCard({ country }) {
       onClick={() => setShowModal(!showModal)}
       className={
         darkmode.state
-          ? "mt-8 md:mt-10 md:ml-6 w-full md:w-72 rounded bg-oxford-blue-900 cursor-pointer"
-          : "mt-8 md:mt-10 md:ml-6 w-full md:w-72 rounded bg-white cursor-pointer"
+          ? "mt-8 pb-8 md:mt-10 md:ml-8 w-full md:w-72 rounded bg-oxford-blue-900 cursor-pointer"
+          : "mt-8 pb-8 md:mt-10 md:ml-8 w-full md:w-72 rounded bg-white cursor-pointer"
       }
     >
-      <div className="overflow-hidden h-48 md:h-48 rounded-t">
+      <div className="overflow-hidden  rounded-t">
         <img
-          className="object-cover"
+          className="w-full h-48 md:h-48 object-cover"
           src={country.flags.svg}
           alt={`flag of ${country.name}`}
         />
@@ -34,15 +34,15 @@ export default function CountryCard({ country }) {
         <p className="font-semibold">{country.name}</p>
 
         <div className="mt-2 text-sm">
-          <p className="text-xs">
+          <p className="text-xs font-thin text-slate-200">
             <span className="font-semibold text-sm">Population: </span>
             {new Intl.NumberFormat("fr-FR").format(country.population)}
           </p>
-          <p className="text-xs">
+          <p className="text-xs font-thin text-slate-200">
             <span className="font-semibold text-sm">Regions: </span>
             {country.region}
           </p>
-          <p className="text-xs">
+          <p className="text-xs font-thin text-slate-200">
             <span className="font-semibold text-sm">Capital: </span>
             {country.capital}
           </p>

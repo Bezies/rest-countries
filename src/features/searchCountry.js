@@ -12,8 +12,11 @@ export const searchCountry = createSlice({
     addName: (state, action) => {
       state.SearchByName = action.payload;
     },
+    addRegion: (state, action) => {
+      state.FilterByRegion = action.payload;
+    },
   },
 });
 
-export const { addName } = searchCountry.actions;
+export const { addName, addRegion } = searchCountry.actions;
 export default searchCountry.reducer;

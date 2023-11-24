@@ -18,7 +18,9 @@ export default function Header() {
     >
       <p
         className={
-          darkmode.state ? "font-bold text-white" : "font-bold text-black"
+          darkmode.state
+            ? "font-bold text-white md:text-xl"
+            : "font-bold text-black md:text-xl"
         }
       >
         Where in the world?

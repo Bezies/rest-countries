@@ -31,6 +31,9 @@ export default {
           950: "#1b2731",
         },
       },
+      fontFamily: {
+        nuno: ["Nunito Sans", "sans-serif"],
+      },
     },
   },
   plugins: [],
